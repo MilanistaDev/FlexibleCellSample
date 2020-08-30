@@ -34,7 +34,7 @@ final class ViewController: UIViewController {
 
 extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return cellDataList.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -45,8 +45,6 @@ extension ViewController: UITableViewDataSource {
         cell.sampleImageView.image = UIImage(systemName: cellDataList[indexPath.row].imageName)
         return cell
     }
-
-
 }
 
 extension ViewController: UITableViewDelegate { }
